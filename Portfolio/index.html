@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #4a90e2, #50e3c2);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background: linear-gradient(to right, #4a90e2, #50e3c2);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 10px 0;
+            font-size: 1em;
+            border-radius: 20px;
+        }
+
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: white;
+        }
+
+        nav {
+            margin: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1em;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .intro h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #4a90e2;
+            text-shadow: 1px 1px #e0e0e0;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects {
+            padding: 50px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .projects h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #50e3c2;
+            text-shadow: 1px 1px #e0e0e0;
+        }
+
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .project {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .project h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #4a90e2;
+        }
+
+        .project p {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .project a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .project a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .video-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .video-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4a90e2;
+            text-shadow: 1px 1px #e0e0e0;
+        }
+
+        .video-section video {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #50e3c2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 0;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav {
+                margin: 15px 0;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .intro h2 {
+                font-size: 2em;
+            }
+
+            .projects h2 {
+                font-size: 1.8em;
+            }
+
+            .project {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Darshan Dayal</h1>
+        <nav>
+            <a href="#intro">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#video">Video</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section id="intro" class="intro">
+        <h2>Hello, I'm Darshan Dayal</h2>
+        <p>I’m a passionate Web Developer, specializing in Frontend Development. I love creating solutions that make an impact. Let's work together to bring your ideas to life!</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-list">
+            <div class="project web-development">
+                <h3>Project Title 1</h3>
+                <p>  E-commerce Website using Modern
+                    technologies</p>
+                <a href="https://github.com/yourusername/project1" target="_blank">View Project</a>
+            </div>
+            <div class="project data-analysis">
+                <h3>Project Title 2</h3>
+                <p> Development of an Event Management App using Flutter</p>
+                <a href="https://github.com/yourusername/project2" target="_blank">View Project</a>
+            </div>
+            <div class="project web-development">
+                <h3>Project Title 3</h3>
+                <p>Deployment of Flutter 
+                    App on Azure</p>
+                <a href="https://github.com/yourusername/project3" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="video" class="video-section">
+        <h2>Project Showcase</h2>
+        <video controls>
+            <source src="Videos/Project_Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <footer>
+        <h3>Connect with me</h3>
+        <a href="https://www.linkedin.com/in/darshan-dayal-39a061263" target="_blank">LinkedIn</a>
+        <a href="mailto:darshanvicky762@gmail.com">Email</a>
+    </footer>
+
+</body>
+
+</html>
